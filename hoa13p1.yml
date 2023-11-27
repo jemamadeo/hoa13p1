@@ -1,0 +1,25 @@
+---
+- name: OpenStack Prerequisite Installation Playbook
+  hosts: ubuntu
+  become: true
+  roles:
+    - common
+    - ntp
+    - openstack_packages
+    - sql_database
+    - message_queue
+    - memcached
+    - etcd
+
+#  hosts: centos
+#  become: true
+#  vars:
+#    ansible_python_interpreter: /usr/bin/python2
+#  roles:
+#    - common
+#    - ntp
+#    - openstack_packages
+#    - sql_database
+#    - message_queue
+#    - memcached
+#    - etcd
